@@ -29,3 +29,24 @@
 .link-hover:hover {
   transform: translateY(-1px);
 }
+
+@media print {
+  @page { margin: 1cm; size: A4 portrait; }
+  body { background: white !important; color: black !important; }
+  body::before { display: none !important; }
+  nav, footer, button, .magnetic-btn, a[href="#contact"], #contact { display: none !important; }
+  .hero-anim, .about-anim, .timeline-card, .skill-tag, .formation-card { opacity: 1 !important; transform: none !important; animation: none !important; }
+  section { padding: 1.5rem 0 !important; page-break-inside: avoid; break-inside: avoid; }
+  #hero { min-height: auto !important; padding-top: 0 !important; }
+  
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; text-shadow: none !important; box-shadow: none !important; }
+  
+  .text-white { color: #000 !important; }
+  .text-secondary, .text-secondary\/70, .text-secondary\/80, .text-secondary\/90 { color: #333 !important; }
+  .bg-background, .bg-white\/5 { background-color: transparent !important; }
+  .border-white\/10, .border-white\/5 { border-color: #ddd !important; }
+  .bg-graphite { background-color: transparent !important; border: 1px solid #ddd !important; }
+  
+  /* Ensure timeline works on print */
+  .timeline-card, .skill-tag, .formation-card { border: 1px solid #ddd !important; border-radius: 1rem !important; }
+}

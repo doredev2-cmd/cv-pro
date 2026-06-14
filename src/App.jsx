@@ -105,10 +105,10 @@ export default function App() {
           <a href="#skills" className="link-hover hover:text-accent transition-colors">Compétences</a>
           <a href="#contact" className="link-hover hover:text-accent transition-colors">Contact</a>
         </div>
-        <a href="#contact" className="magnetic-btn hidden md:flex items-center gap-2 bg-accent text-white px-4 py-2 rounded-full text-sm font-semibold hover:shadow-glow transition-all">
+        <button onClick={() => window.print()} className="magnetic-btn hidden md:flex items-center gap-2 bg-accent text-white px-4 py-2 rounded-full text-sm font-semibold hover:shadow-glow transition-all">
           <Download size={16} />
           <span>CV</span>
-        </a>
+        </button>
       </nav>
 
       {/* HERO */}
@@ -138,10 +138,10 @@ export default function App() {
           </div>
           
           <div className="hero-anim flex flex-col sm:flex-row gap-4">
-            <a href="/cv.pdf" download className="magnetic-btn px-8 py-4 bg-accent text-white rounded-full font-semibold flex items-center justify-center gap-2 hover:shadow-glow transition-all">
+            <button onClick={() => window.print()} className="magnetic-btn px-8 py-4 bg-accent text-white rounded-full font-semibold flex items-center justify-center gap-2 hover:shadow-glow transition-all">
               <Download size={20} />
               Télécharger CV
-            </a>
+            </button>
             <a href="#contact" className="magnetic-btn px-8 py-4 border border-white/20 rounded-full font-semibold hover:bg-white/5 transition-all">
               Me contacter
             </a>
